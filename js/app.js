@@ -42,7 +42,7 @@
 			var button = this.id;
 			var c = Clock.cache;
       
-      Clock.resetTimer();
+      		Clock.resetTimer();
 			switch (button) {
 				case 'break-increase':
 					c.breakTime += c.breakTime !== 60 ? 1 : 0;
