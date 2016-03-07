@@ -16,7 +16,7 @@ gulp.task('js', function () {
 	.pipe(jshint())
 	.pipe(jshint.reporter('default', { verbose: true }))
 	.pipe(concat('app.min.js'))
-	// .pipe(uglify())
+	.pipe(uglify())
 	.pipe(gulp.dest('./js/dist/'))
 });
 

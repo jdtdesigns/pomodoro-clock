@@ -1,33 +1,45 @@
-<div class="Clock">
-	<div class="Clock__settings">
-		<div class="Clock__break">
-			<h4>Break Length</h4>
-			<button id="break-decrease">&#45;</button>
-			<span id="break-amount"></span>
-			<button id="break-increase">&#43;</button>
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pomodoro Clock</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="Clock">
+		<div class="Clock__settings">
+			<div class="Clock__break">
+				<h4>Break Length</h4>
+				<button id="break-decrease">&#45;</button>
+				<span id="break-amount"></span>
+				<button id="break-increase">&#43;</button>
+			</div>
+			<div class="Clock__session">
+				<h4>Session Length</h4>
+				<button id="session-decrease">&#45;</button>
+				<span id="session-amount"></span>
+				<button id="session-increase">&#43;</button>
+			</div>
 		</div>
-		<div class="Clock__session">
-			<h4>Session Length</h4>
-			<button id="session-decrease">&#45;</button>
-			<span id="session-amount"></span>
-			<button id="session-increase">&#43;</button>
+		<div class="Clock__indicator-break">
+			<div id="break-indicator"></div>
 		</div>
-	</div>
-	<div class="Clock__indicator-break">
-		<div id="break-indicator"></div>
-	</div>
-	<div class="Clock__indicator-session">
-		<div id="session-indicator"></div>
-	</div>
-	<div id="clock" class="Clock__time">
-		<div>
-			<h5 id="clock-type">Session</h5>
-			<span id="minutes"></span><span id="seconds"></span>
+		<div class="Clock__indicator-session">
+			<div id="session-indicator"></div>
 		</div>
+		<div id="clock" class="Clock__time">
+			<div>
+				<h5 id="clock-type">Session</h5>
+				<span id="minutes"></span><span id="seconds"></span>
+			</div>
+		</div>
+		<div class="Clock__stand-left"></div>
+		<div class="Clock__reset">
+			<button id="reset">Reset</button>
+		</div>
+		<div class="Clock__stand-right"></div>
 	</div>
-	<div class="Clock__stand-left"></div>
-	<div class="Clock__reset">
-		<button id="reset">Reset</button>
-	</div>
-	<div class="Clock__stand-right"></div>
-</div>
+	<script src="js/dist/app.min.js"></script>
+</body>
+</html>
