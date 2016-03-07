@@ -77,6 +77,10 @@
 
 			// If timer isn't counting down, start countdown
 			if ( c.timerStarted === false ) {
+				/* 	If the timer minute hand is equal to session/break amount
+				*	setting, decrease by one --- Prevents clock from being a minute
+				*	ahead on start
+				*/
 				 if ( c.sessionTime === parseInt(c.sessionAmount.innerHTML ) ) {
 				 	c.sessionTime -= 1;
 				 }
@@ -94,6 +98,7 @@
 
 				 	// Start Session
 				 	if ( c.clockType.innerHTML === 'Session' ) {
+				 		// Take the total height of indicator div and divide by total seconds
 				 		c.sessionIndicatorLevel += 182 / (c.sessionCurrentTime * 60);
 				 		c.sessionIndicator.setAttribute('style', 'height:' + c.sessionIndicatorLevel + 'px;');
 				 		c.minuteHand.innerHTML = c.sessionTime;
